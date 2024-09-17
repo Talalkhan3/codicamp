@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import SideNav from "./Components/SideNav";
+import Navbar from "@/app/components/Navbar";
+import Ads from "./Components/Ads";
+
 import { GeistSans } from "geist/font/sans";
+import { NextUIProvider } from "@nextui-org/react";
 import { ThemeProvider } from "@/components/ui/theme-provider";
 
 export const metadata: Metadata = {
@@ -16,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
+
+          <div className="flex mx-auto h-full max-w-[1390px]">
+            <SideNav />
+            <div className="w-full ml-10 mr-24 mt-8 ">{children}</div>
+          </div>
        
-          
-          {children}
-     
       </body>
     </html>
   );
