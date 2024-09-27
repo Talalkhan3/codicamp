@@ -304,7 +304,7 @@ function Hero() {
           HTML is Not Case Sensitive
         </h1>
         <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           HTML tags are not case sensitive:{" "}
           <Code color="success" radius="full">
             {"<p>"}

@@ -37,7 +37,7 @@ const htmlIntroductionNav = [
   },
   {
     label: "Quotations",
-    href: "/doc/html/quotation",
+    href: "/doc/html/quotations",
   },
   {
     label: "Comments",
