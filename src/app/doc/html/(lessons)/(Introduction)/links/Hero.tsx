@@ -98,21 +98,21 @@ function Hero() {
         </p>
         <ul className="flex flex-col gap-1 mt-3 ml-5">
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <p className="text-[16px] text-[#71717a]">
               {" "}
               An unvisited link is underlined and blue
             </p>
           </li>
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <p className="text-[16px] text-[#71717a]">
               {" "}
               A visited link is underlined and purple
             </p>
           </li>
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <p className="text-[16px] text-[#71717a]">
               {" "}
               An active link is underlined and red
@@ -138,7 +138,7 @@ function Hero() {
         </p>
         <ul className="flex flex-col gap-1 mt-3 ml-5">
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <Code color="success">_self</Code>
             <p className="text-[16px] text-[#71717a]">
               {" "}
@@ -147,7 +147,7 @@ function Hero() {
             </p>
           </li>
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <Code color="success">_blank</Code>
             <p className="text-[16px] text-[#71717a]">
               {" "}
@@ -155,7 +155,7 @@ function Hero() {
             </p>
           </li>
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <Code color="success">_parent</Code>
             <p className="text-[16px] text-[#71717a]">
               {" "}
@@ -163,7 +163,7 @@ function Hero() {
             </p>
           </li>
           <li className="flex items-center gap-2">
-            <div className="h-2 w-2 bg-black rounded-3xl"></div>{" "}
+            <div className="h-[6px] w-[6px] bg-black rounded-3xl"></div>{" "}
             <Code color="success">_top</Code>
             <p className="text-[16px] text-[#71717a]">
               {" "}
