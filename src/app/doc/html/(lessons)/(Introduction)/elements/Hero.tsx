@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-md:pr-3">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -45,6 +45,7 @@ function Hero() {
           An HTML element is defined by a start tag, some content, and an end
           tag.
         </p>
+        <Separator className="mt-5" />
       </div>
       {/* HTML Elements */}
       <div className="mt-7">
@@ -54,11 +55,7 @@ function Hero() {
         </p>
 
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code
-            color="success"
-            size="lg"
-            className="border-l-5 border-[#33d45e]"
-          >
+          <Code color="success" className="border-l-5 border-[#33d45e]">
             {"<tagname>"} Content {"</tagname>"}
           </Code>
         </div>
@@ -66,21 +63,13 @@ function Hero() {
           Examples of some HTML elements:
         </p>
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code
-            color="success"
-            size="lg"
-            className="border-l-5 border-[#33d45e]"
-          >
+          <Code color="success" className="border-l-5 border-[#33d45e]">
             {" "}
             {"<h1>"} My First Heading {"</h1>"}
           </Code>
         </div>
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code
-            color="success"
-            size="lg"
-            className="border-l-5 border-[#33d45e]"
-          >
+          <Code color="success" className="border-l-5 border-[#33d45e]">
             {"<p>"} My First Paragraph {""}
             {"</p>"}
           </Code>
@@ -118,7 +107,6 @@ function Hero() {
         <Code
           className="mt-2 w-full border-l-5 border-[#33d45e] p-3"
           color="success"
-          size="lg"
         >
           {"<!DOCTYPE html>"} <br />
           {"<html>"} <br />
@@ -157,7 +145,6 @@ function Hero() {
           <Code
             className="border-l-5 border-[#33d45e] mt-3 w-full p-3 "
             color="success"
-            size="lg"
           >
             {"<body>"} <br /> <br />
             {"<h1>My First Heading</h1>"} <br />
@@ -196,7 +183,6 @@ function Hero() {
           <Code
             className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
             color="success"
-            size="lg"
           >
             {"<h1>My First Heading</h1>"} <br />
             {"<p>My first paragraph.</p>"}
@@ -267,7 +253,6 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
         >
           {"<html>"} <br />
           {"<body>"} <br /> <br />
@@ -294,7 +279,6 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
         >
           {"<p>This is a <br> paragraph with a line break.</p>"}
         </Code>
@@ -318,7 +302,7 @@ function Hero() {
       <Separator className="my-5" />
       {/* BUTTONS FOR NAVIGATION */}
 
-      <div className="flex justify-between mt-10 mb-24">
+      <div className="flex justify-between mt-10 mb-24 ">
         <Link href={"/doc/html/basic"}>
           <Button variant={"outline"} className="flex gap-3">
             <ChevronLeftIcon className="h-4 w-4" /> Basic
