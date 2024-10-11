@@ -20,12 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-
-          <div className="flex mx-auto h-full max-w-[1390px]">
-            <SideNav />
-            <div className="w-full ml-10 mr-24 mt-8 max-md:ml-3 max-md:mr-0">{children}</div>
+        <div className="flex mx-auto h-full max-w-[1390px]">
+          <SideNav />
+          <div className="w-full ml-10 mr-24 mt-8 max-lg:ml-3 max-lg:mr-0">
+            {children}
           </div>
-       
+        </div>
       </body>
     </html>
   );

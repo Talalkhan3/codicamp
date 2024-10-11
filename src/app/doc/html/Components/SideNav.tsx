@@ -7,7 +7,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 
 function SideNav() {
   return (
-    <ScrollArea className="h-[92vh] min-w-64 fixed max-md:hidden">
+    <ScrollArea className="h-[92vh] min-w-64 fixed max-lg:hidden">
       <div className="py-10 px-4">
         <h4 className="mb-4 text-[14px] font-bold leading-none text-[#09090b]">
           Getting Started
