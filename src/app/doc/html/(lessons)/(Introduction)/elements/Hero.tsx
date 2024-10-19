@@ -34,8 +34,7 @@ function Hero() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-      </div>
-
+      </div> 
       {/*  Elements */}
 
       <div className="mt-10 ">

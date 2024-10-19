@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import htmlsidebar from "@/app/shared/htmlsidebar";
+import csssidebar from "@/app/shared/csssidebar";
 import Link from "next/link";
 import { ScrollArea } from "@/components/ui/scroll-area";
 
@@ -13,7 +13,7 @@ function SideNav() {
         <h4 className="mb-4 text-[14px] font-bold leading-none text-[#09090b]">
           Getting Started
         </h4>
-        {htmlsidebar.htmlIntroductionNav.map((tag, index) => (
+        {csssidebar.cssIntroductionNav.map((tag, index) => (
           <div key={index}>
             <Link
               key={index}
@@ -31,10 +31,10 @@ function SideNav() {
         ))}
       </div>
 
-      {/* Forms Part */}
+      {/* Advanced Part */}
       <div className="p-4">
-        <h4 className="mb-4 text-lg font-medium leading-none">Forms</h4>
-        {htmlsidebar.htmlFormNav.map((tag, index) => (
+        <h4 className="mb-4 text-lg font-medium leading-none">Advanced</h4>
+        {csssidebar.cssAdvancedNav.map((tag, index) => (
           <div key={index}>
             <Link
               key={index}
@@ -52,32 +52,11 @@ function SideNav() {
         ))}
       </div>
 
-      {/* Graphics Part */}
+      {/* Responsive Part */}
 
       <div className="p-4">
-        <h4 className="mb-4 text-lg font-medium leading-none">Graphics</h4>
-        {htmlsidebar.htmlGraphicNav.map((tag, index) => (
-          <div key={index}>
-            <Link
-              key={index}
-              href={tag.href}
-              className="text-sm  text-[14px] text-[#71717a] hover:underline"
-            >
-              <div
-                key={index}
-                className="flex flex-row justify-normal mt-3 items-center"
-              >
-                <h1>{tag.label}</h1>
-              </div>
-            </Link>
-          </div>
-        ))}
-      </div>
-
-      {/* Media Part */}
-      <div className="p-4">
-        <h4 className="mb-4 text-lg font-medium leading-none">Media</h4>
-        {htmlsidebar.htmlMediaNav.map((tag, index) => (
+        <h4 className="mb-4 text-lg font-medium leading-none">Responsive</h4>
+        {csssidebar.cssResponsiveNav.map((tag, index) => (
           <div key={index}>
             <Link
               key={index}

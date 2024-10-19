@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:pr-3">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -123,6 +123,8 @@ function Hero() {
           </Button>
         </Link>
       </div>
+
+
     </ScrollArea>
   );
 }
