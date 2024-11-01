@@ -8,6 +8,10 @@ const cssIntroductionNav = [
     href: "/doc/css/syntax",
   },
   {
+    label: "Selectors",
+    href: "/doc/css/selectors",
+  },
+  {
     label: "How to",
     href: "/doc/css/how-to",
   },

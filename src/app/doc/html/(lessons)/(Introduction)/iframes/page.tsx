@@ -1,12 +1,17 @@
-import React from 'react'
-import Hero from './Hero'
+import React from "react";
+import Hero from "./Hero";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "HTML iframes",
+};
 
 function page() {
   return (
     <div>
-        <Hero />
+      <Hero />
     </div>
-  )
+  );
 }
 
-export default page
+export default page;
