@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -39,72 +39,57 @@ function Hero() {
       <div className="mt-10 ">
         <h1 className="text-[30px] text-[#09090b] font-bold">Attributes</h1>
         <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           Every HTML element can include attributes, which supply extra
           information about the element. These attributes are always placed
           within the opening tag and typically follow a name/value structure,
-          such as{" "}
-          <Code color="success" radius="full">
-            name="value"
-          </Code>{" "}
-          .
+          such as <Code color="success">name="value"</Code> .
         </p>
       </div>
 
       {/* href Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {" "}
           The href Attribute
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<a>"}
-          </Code>{" "}
-          tag defines a hyperlink. The{" "}
-          <Code color="success" radius="full">
-            {"href"}
-          </Code>{" "}
-          attribute specifies the URL of the page the link goes to:
+        <p className="text-[16px] text-[#71717a] mt-3">
+          The <Code color="success">{"<a>"}</Code> tag defines a hyperlink. The{" "}
+          <Code color="success">{"href"}</Code> attribute specifies the URL of
+          the page the link goes to:
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] mt-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] mt-3 p-3"
         >
-          {`<a href="https://www.w3schools.com">Visit W3Schools</a>`}
+          {`<a href="https://www.w3schools.com">`} <br /> {`Visit W3Schools`}{" "}
+          <br />
+          {`</a>`}
         </Code>
       </div>
 
       {/* src Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The src Attribute
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<img>"}
-          </Code>{" "}
-          tag is used to embed an image in an HTML page. The
-          <Code color="success" radius="full">
-            {"src"}
-          </Code>{" "}
-          attribute specifies the path to the image to be displayed:
+        <p className="text-[16px] text-[#71717a] mt-3">
+          The <Code color="success">{"<img>"}</Code> tag is used to embed an
+          image in an HTML page. The
+          <Code color="success">{"src"}</Code> attribute specifies the path to
+          the image to be displayed:
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`<img src="img_girl.jpg">`}
         </Code>
-        <div className="mt-3">
+        <div>
           <p className="text-[16px] text-[#71717a] ">
             There are two ways to specify the URL in the src attribute:
           </p>
@@ -136,22 +121,19 @@ function Hero() {
       {/* The width and height Attributes */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The width and height Attributes
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<img>"}
-          </Code>{" "}
-          tag should also contain the width and height attributes, which specify
-          the width and height of the image (in pixels):
+
+        <p className="text-[16px] text-[#71717a] mt-3">
+          The <Code color="success">{"<img>"}</Code> tag should also contain the
+          width and height attributes, which specify the width and height of the
+          image (in pixels):
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`img src="img_girl.jpg" width="500" height="600">`}
         </Code>
@@ -160,38 +142,29 @@ function Hero() {
       {/* The alt Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The alt Attribute
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
-          The required{" "}
-          <Code color="success" radius="full">
-            {"alt"}
-          </Code>{" "}
-          attribute for the{" "}
-          <Code color="success" radius="full">
-            {"<img>"}
-          </Code>{" "}
-          tag specifies an alternate text for an image, if the image for some
-          reason cannot be displayed. This can be due to a slow connection, or
-          an error in the{" "}
-          <Code color="success" radius="full">
-            {"src"}
-          </Code>{" "}
-          attribute, or if the user uses a screen reader. Example
+
+        <p className="text-[16px] text-[#71717a] mt-3">
+          The required <Code color="success">{"alt"}</Code> attribute for the{" "}
+          <Code color="success">{"<img>"}</Code> tag specifies an alternate text
+          for an image, if the image for some reason cannot be displayed. This
+          can be due to a slow connection, or an error in the{" "}
+          <Code color="success">{"src"}</Code> attribute, or if the user uses a
+          screen reader. Example
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`<img src="img_girl.jpg" alt="Girl with a jacket">`}
         </Code>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`<img src="img_typo.jpg" alt="Girl with a jacket">`}
         </Code>
@@ -200,49 +173,43 @@ function Hero() {
       {/* The style Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The style Attribute
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
-          The{" "}
-          <Code color="success" radius="full">
-            {"style"}
-          </Code>{" "}
-          attribute is used to add styles to an element, such as color, font,
-          size, and more.
+
+        <p className="text-[16px] text-[#71717a] mt-3">
+          The <Code color="success">{"style"}</Code> attribute is used to add
+          styles to an element, such as color, font, size, and more.
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] mt-3 p-3"
         >
-          {`<p style="color:red;">This is a red paragraph.</p>`}
+          {`<p style="color:red;">`} <br />
+          {`This is a red paragraph.`} <br />
+          {`</p>`}
         </Code>
       </div>
       {/* The lang Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The lang Attribute
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           You should always include the lang attribute inside the {""}
-          <Code color="success" radius="full">
-            {"<html>"}
-          </Code>{" "}
-          tag, to declare the language of the Web page. This is meant to assist
-          search engines and browsers.
+          <Code color="success">{"<html>"}</Code> tag, to declare the language
+          of the Web page. This is meant to assist search engines and browsers.
         </p>
-        <p className="text-[16px] text-[#71717a] mt-1">
+        <p className="text-[16px] text-[#71717a] mt-3">
           The following example specifies English as the language:
         </p>
 
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-3"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {"<!DOCTYPE html>"} <br />
           {`<html lang="en">`} <br />
@@ -259,14 +226,14 @@ function Hero() {
           HTML page, and the last two characters define the country.
         </p>
 
-        <p className="text-[16px] text-[#71717a] mt-1">
+        <p className="text-[16px] text-[#71717a] mt-3">
           The following example specifies English as the language and United
           States as the country:
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-3"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] mt-3 p-3"
         >
           {"<!DOCTYPE html>"} <br />
           {`<html lang="en-US">`} <br />
@@ -279,19 +246,19 @@ function Hero() {
       </div>
       {/* The title Attribute */}
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           The title Attribute{" "}
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+
+        <p className="text-[16px] text-[#71717a] mt-3">
           The title attribute defines some extra information about an element.
           The value of the title attribute will be displayed as a tooltip when
           you mouse over the element:
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-3"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] mt-3 p-3"
         >
           {`<p title="I'm a tooltip">This is a paragraph.</p>`}
         </Code>
@@ -300,11 +267,11 @@ function Hero() {
       {/* Always Use Lowercase Attributes */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           Always Use Lowercase Attributes
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+
+        <p className="text-[16px] text-[#71717a] mt-3">
           The HTML standard does not require lowercase attribute names. The
           title attribute (and all other attributes) can be written with
           uppercase or lowercase like title or TITLE. However, W3C recommends
@@ -316,11 +283,11 @@ function Hero() {
       {/* Always Quote Attribute Values */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           Always Quote Attribute Values
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+
+        <p className="text-[16px] text-[#71717a] mt-3">
           The HTML standard does not require quotes around attribute values.
           However, W3C recommends quotes in HTML, and demands quotes for
           stricter document types like XHTML.
@@ -328,27 +295,29 @@ function Hero() {
         <h3 className="text-green-500 text-[18px] mt-2">Good</h3>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
-          {`<a href="https://www.w3schools.com/html/">Visit our HTML tutorial</a>`}
+          {`<a href="https://www.w3schools.com/html/">`} <br />{" "}
+          {`Visit our HTML tutorial`} <br /> {`</a>`}
         </Code>
         <h3 className="text-red-500 text-[18px] mt-2">Bad</h3>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
-          {`<a href=https://www.w3schools.com/html/>Visit our HTML tutorial</a>`}
+          {`<a href=https://www.w3schools.com/html/>`} <br />{" "}
+          {`Visit our HTML tutorial`} <br /> {`</a>`}
         </Code>
-        <p className="text-[16px] text-[#71717a] mt-2">
+        <p className="text-[16px] text-[#71717a]">
           Sometimes you have to use quotes. This example will not display the
           title attribute correctly, <br /> because it contains a space:
         </p>
         <Code
           color="success"
           size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          className=" w-full border-l-5 border-[#33d45e] mt-3 p-3"
         >
           {`<p title=About W3Schools>`}
         </Code>
@@ -357,11 +326,10 @@ function Hero() {
       {/* Single or Double Quotes? */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
           Single or Double Quotes?
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           Double quotes around attribute values are the most common in HTML, but
           single quotes can also be used. In some situations, when the attribute
           value itself contains double quotes, it is necessary to use single
@@ -369,16 +337,16 @@ function Hero() {
         </p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`<p title='John "ShotGun" Nelson'>`}
         </Code>
         <p className="text-[16px] text-[#71717a]">Or vice versa:</p>
         <Code
           color="success"
-          size="lg"
-          className=" w-full border-l-5 border-[#33d45e] my-2"
+          size="md"
+          className=" w-full border-l-5 border-[#33d45e] my-3 p-3"
         >
           {`<p title="John 'ShotGun' Nelson">`}
         </Code>
@@ -387,36 +355,27 @@ function Hero() {
       {/* SUMMARY */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Summary</h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400">
+          Summary
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
           HTML elements can have attributes that provide additional information
           or functionality. For example, the href attribute in an{" "}
-          <Code color="success" radius="full">
-            {"<a>"}
-          </Code>{" "}
-          tag specifies the destination URL for the link, while the src
-          attribute in an{" "}
-          <Code color="success" radius="full">
-            {"<img>"}
-          </Code>{" "}
-          tag defines the image source. The width and height attributes of{" "}
-          <Code color="success" radius="full">
-            {"<img>"}
-          </Code>{" "}
-          set image dimensions, and the alt attribute provides alternative text
-          if the image fails to load. The style attribute allows inline styling,
-          such as color, font, or size, and the lang attribute of the{" "}
-          <Code color="success" radius="full">
-            {"<html>"}
-          </Code>{" "}
-          tag specifies the language of the webpage. Additionally, the title
-          attribute offers extra information, usually shown as a tooltip when
-          hovering over an element.
+          <Code color="success">{"<a>"}</Code> tag specifies the destination URL
+          for the link, while the src attribute in an{" "}
+          <Code color="success">{"<img>"}</Code> tag defines the image source.
+          The width and height attributes of{" "}
+          <Code color="success">{"<img>"}</Code> set image dimensions, and the
+          alt attribute provides alternative text if the image fails to load.
+          The style attribute allows inline styling, such as color, font, or
+          size, and the lang attribute of the{" "}
+          <Code color="success">{"<html>"}</Code> tag specifies the language of
+          the webpage. Additionally, the title attribute offers extra
+          information, usually shown as a tooltip when hovering over an element.
         </p>
       </div>
 
-      <Separator className="my-5" />
+      <Separator className="my-5 bg-green-300" />
       {/* BUTTONS FOR NAVIGATION */}
 
       <div className="flex justify-between mt-10 mb-24">

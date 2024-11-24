@@ -17,7 +17,7 @@ import { TableDemo } from "./Table";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -55,9 +55,12 @@ function Hero() {
           a way to structure and present information in a clear and organized
           manner.
         </p>
+        <Separator className="mt-5" />
 
         <div className="mt-7">
-          <h1 className="text-[30px] text-[#09090b] font-bold">Example</h1>
+          <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline decoration-green-400">
+            Example
+          </h1>
 
           <Code color="success" size="md" className="w-full p-3 mt-3">
             {"<!DOCTYPE html>"} <br />
@@ -77,7 +80,7 @@ function Hero() {
       {/* CODE EXPLANATION */}
 
       <div className="mt-5">
-        <h1 className="text-[#09090b] text-[22px] font-semibold">
+        <h1 className="text-[#09090b] text-[22px] font-semibold decoration-2 underline underline-offset-4 decoration-green-400">
           Explanation
         </h1>
         <div className="mt-3">
@@ -138,10 +141,9 @@ function Hero() {
       {/* WHAT IS AN ELEMENT ? */}
 
       <div className="mt-5">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           What is an HTML Element ?
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           An HTML element is defined by a start tag, some content, and an end
           tag:
@@ -165,7 +167,9 @@ function Hero() {
       {/* HISTORY OF HTML */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">History</h1>
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
+          History
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3 mb-7">
           Since the early days of the World Wide Web, there have been many
           versions of HTML:

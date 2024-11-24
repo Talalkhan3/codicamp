@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-
 import { GeistSans } from "geist/font/sans";
 import SideNav from "./Components/SideNav";
+import Navbar from "@/app/components/Navbar";
 
 export const metadata: Metadata = {
   title: "CSS ",
@@ -16,9 +16,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={GeistSans.className}>
-        <div className="flex mx-auto h-full max-w-[1390px]">
+        <Navbar />
+        <div className="flex mx-auto h-full max-w-[1390px] pt-8 border-l border-r max-lg:border-none">
           <SideNav />
-          <div className="w-full ml-10 mr-24 mt-8 max-lg:ml-3 max-lg:mr-0">
+          <div className="w-full ml-10  max-lg:ml-3 max-lg:mr-2 max-h-[80vh]">
             {children}
           </div>
         </div>

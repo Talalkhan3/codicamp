@@ -66,9 +66,9 @@ const invoices = [
 
 export function TableDemo() {
   return (
-    <Table>
+    <Table className="border">
       <TableCaption>list of all HTML versions</TableCaption>
-      <TableHeader>
+      <TableHeader className="bg-gray-100">
         <TableRow>
           <TableHead className="w-[100px]">Year</TableHead>
           <TableHead>Version</TableHead>

@@ -38,7 +38,7 @@ function Hero() {
       {/* EDITORS */}
 
       <div className="mt-1 w-full">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Editors</h1>
+        <h1 className="text-[30px] text-[#09090b] font-bold ">Editors</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           Web pages can be developed and customized using advanced HTML editors,
@@ -56,12 +56,13 @@ function Hero() {
           understanding of how HTML works, enabling you to build a strong
           foundation.
         </p>
+        <Separator className="mt-5" />
       </div>
 
       {/* Use a Simple Text Editor  */}
 
       <div className="mt-7">
-        <h1 className="text-[24px] text-[#09090b] font-bold">
+        <h1 className="text-[24px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           Why Use a Simple Text Editor?
         </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
@@ -76,7 +77,7 @@ function Hero() {
       {/* GETTING STARTED TO NOTEPAD AND TEXTEDIT */}
 
       <div className="mt-7">
-        <h1 className="text-[24px] text-[#09090b] font-bold">
+        <h1 className="text-[24px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           Getting Started with Notepad (PC) or TextEdit (Mac)
         </h1>
         <p className="text-[16px] text-[#71717a] mt-2">
@@ -155,7 +156,7 @@ function Hero() {
         {/* MACOS EDITOR */}
 
         <div className="mt-10">
-          <h1 className="text-[18px] text-[#09090b] font-bold">
+          <h1 className="text-[18px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
             For TextEdit (macOS Users):
           </h1>
           <div className="flex flex-col mt-3 ml-5 ">
@@ -233,13 +234,12 @@ function Hero() {
         </div>
       </div>
 
-
-
       {/* MOVING FORWARD SECTION */}
 
-
       <div className="mt-7">
-        <h1 className="text-[24px] text-[#09090b] font-bold">Moving Forward</h1>
+        <h1 className="text-[24px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
+          Moving Forward
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           Once you're comfortable creating basic HTML pages, you can explore
           professional HTML editors that offer advanced tools to improve

@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -39,7 +39,7 @@ function Hero() {
       {/* Comments */}
 
       <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Comments</h1>
+        <h1 className="text-[40px] text-[#09090b] font-bold">Comments</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           HTML comments are not displayed in the browser, but they can help
@@ -49,8 +49,9 @@ function Hero() {
       </div>
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Comment Tag</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Comment Tag
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           You can add comments to your HTML source by using the following
           syntax:
@@ -58,7 +59,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full my-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<!-- Write your comments here -->"}
         </Code>
@@ -71,8 +72,9 @@ function Hero() {
       {/* Add Comments */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Add Comments</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Add Comments
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           With comments you can place notifications and reminders in your HTML
           code:
@@ -80,7 +82,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<!-- This is a comment -->"} <br /> <br />
           {"<p>This is a paragraph.</p>"} <br /> <br />
@@ -91,8 +93,9 @@ function Hero() {
       {/* Hide Content */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Hide Content</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Hide Content
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           Comments can be used to hide content. This can be helpful if you hide
           content temporarily:
@@ -100,7 +103,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full my-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<p>This is a paragraph.</p>"} <br /> <br />
           {"<!-- <p>This is another paragraph </p> -->"} <br /> <br />
@@ -114,12 +117,14 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full my-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<p>This is a paragraph.</p>"} <br />
           {"<!--"} <br />
           {"<p>Look at this cool image:</p>"} <br />
-          {`<img border="0" src="pic_trulli.jpg" alt="Trulli">`} <br />
+          {`<img border="0" `} <br /> {`src="pic_trulli.jpg"`}
+          <br />
+          {`alt="Trulli">`} <br />
           {`-->`} <br />
           {`<p>This is a paragraph too.</p>`}
         </Code>
@@ -132,19 +137,19 @@ function Hero() {
       {/* Hide Inline Content */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Hide Inline Content
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Comments can be used to hide parts in the middle of the HTML code.
         </p>
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {"<p>This <!-- great text --> is a paragraph.</p>"} <br />
+          {"<p>This "} <br /> {"<!-- great text -->"} <br />
+          {" is a paragraph.</p>"} <br />
         </Code>
       </div>
 

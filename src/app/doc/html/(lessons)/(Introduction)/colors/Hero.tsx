@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -39,7 +39,7 @@ function Hero() {
       {/* COLORS */}
 
       <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Colors</h1>
+        <h1 className="text-[40px] text-[#09090b] font-bold">Colors</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           HTML colors are specified with predefined color names, or with RGB,
@@ -51,42 +51,56 @@ function Hero() {
       {/* Color Names */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Color Names</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Color Names
+        </h1>
+
         <p className="text-[16px] text-[#71717a] mt-3">
           In HTML, a color can be specified by using a color name:
         </p>
-        <div className="grid grid-cols-4 gap-5 mt-5">
+        <div className="grid grid-cols-4 gap-5 mt-5 max-lg:gap-2">
           <div className=" h-[100px] bg-[brown] rounded-sm flex justify-center items-center">
-            <h1 className="font-bold text-white ">Brown </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">Brown </h1>
           </div>
           <div className=" h-[100px] bg-[AliceBlue] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-black ">AliceBlue </h1>
+            <h1 className="font-bold text-black max-lg:text-[13px]">
+              AliceBlue{" "}
+            </h1>
           </div>
           <div className=" h-[100px] bg-[ForestGreen] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-white ">ForestGreen </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">
+              ForestGreen{" "}
+            </h1>
           </div>
           <div className=" h-[100px] bg-[Indigo] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-white ">Indigo </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">Indigo </h1>
           </div>
           <div className=" h-[100px] bg-[AntiqueWhite] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-black ">AntiqueWhite </h1>
+            <h1 className="font-bold text-black max-lg:text-[13px]">
+              AntiqueWhite{" "}
+            </h1>
           </div>
           <div className=" h-[100px] bg-[BurlyWood] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-white ">BurlyWood </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">
+              BurlyWood{" "}
+            </h1>
           </div>
           <div className=" h-[100px] bg-[DarkSlateGrey] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-white ">DarkSlateGrey </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">
+              DarkSlateGrey{" "}
+            </h1>
           </div>
           <div className=" h-[100px] bg-[DarkGreen] rounded-sm flex justify-center items-center">
             {" "}
-            <h1 className="font-bold text-white ">DarkGreen </h1>
+            <h1 className="font-bold text-white max-lg:text-[13px]">
+              DarkGreen{" "}
+            </h1>
           </div>
         </div>
       </div>
@@ -94,10 +108,9 @@ function Hero() {
       {/* Background Color */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Background Color
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           You can set the background color for HTML elements:
         </p>
@@ -118,8 +131,9 @@ function Hero() {
       {/* Text Color */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Text Color</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Text Color
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           You can set the color of text:
         </p>
@@ -140,8 +154,9 @@ function Hero() {
       {/* Border Color */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Border Color</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Border Color
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           You can set the color of borders:
         </p>
@@ -161,8 +176,9 @@ function Hero() {
       {/* Color Values */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Color Values</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Color Values
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           In HTML, colors can also be specified using RGB values, HEX values,
           HSL values, RGBA values, and HSLA values. The following three{" "}

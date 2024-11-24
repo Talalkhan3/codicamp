@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:pr-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -36,33 +36,32 @@ function Hero() {
         </Breadcrumb>
       </div>
 
-      <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Paragraphs</h1>
+      <div className="mt-10 max-lg:mt-5">
+        <h1 className="text-[40px] text-[#09090b] font-bold">Paragraphs</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
-          The HTML{" "}
-          <Code color="success" radius="full">
-            {"<p>"}
-          </Code>{" "}
-          element defines a paragraph. A paragraph always starts on a new line,
-          and browsers automatically add some white space (a margin) before and
-          after a paragraph.
+          The HTML <Code color="success">{"<p>"}</Code> element defines a
+          paragraph. A paragraph always starts on a new line, and browsers
+          automatically add some white space (a margin) before and after a
+          paragraph.
         </p>
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<p>This is a paragraph.</p>`} <br />
           {`<p>This is another paragraph.</p>`}
         </Code>
+        <Separator className="mt-5" />
       </div>
 
       {/* HTML Display */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">HTML Display</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          HTML Display
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           You cannot be sure how HTML will be displayed. Large or small screens,
           and resized windows will create different results. With HTML, you
@@ -73,7 +72,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<p>"} <br />
           {"This paragraph"} <br />
@@ -95,27 +94,20 @@ function Hero() {
       {/* Horizontal Rules */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Horizontal Rules
         </h1>
-        <Separator />
+
         <p className="text-[16px] text-[#71717a] mt-3">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<hr>"}
-          </Code>{" "}
-          tag defines a thematic break in an HTML page, and is most often
-          displayed as a horizontal rule. The{" "}
-          <Code color="success" radius="full">
-            {"<hr>"}
-          </Code>{" "}
-          element is used to separate content (or define a change) in an HTML
-          page:
+          The <Code color="success">{"<hr>"}</Code> tag defines a thematic break
+          in an HTML page, and is most often displayed as a horizontal rule. The{" "}
+          <Code color="success">{"<hr>"}</Code> element is used to separate
+          content (or define a change) in an HTML page:
         </p>
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<h1>This is heading 1</h1>"} <br />
           {"<p>This is some text.</p>"} <br />
@@ -126,61 +118,48 @@ function Hero() {
         </Code>
 
         <p className="text-[16px] text-[#71717a] ">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<hr>"}
-          </Code>{" "}
-          tag is an empty tag, which means that it has no end tag.
+          The <Code color="success">{"<hr>"}</Code> tag is an empty tag, which
+          means that it has no end tag.
         </p>
       </div>
 
       {/* Line Breaks */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Line Breaks</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Line Breaks
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
-          The HTML{" "}
-          <Code color="success" radius="full">
-            {"<br>"}
-          </Code>{" "}
-          element defines a line break. Use{" "}
-          <Code color="success" radius="full">
-            {"<br>"}
-          </Code>{" "}
-          if you want a line break (a new line) without starting a new
-          paragraph:
+          The HTML <Code color="success">{"<br>"}</Code> element defines a line
+          break. Use <Code color="success">{"<br>"}</Code> if you want a line
+          break (a new line) without starting a new paragraph:
         </p>
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<p>This is<br>a paragraph<br>with line breaks.</p>"}
         </Code>
         <p className="text-[16px] text-[#71717a] ">
-          The{" "}
-          <Code color="success" radius="full">
-            {"<br>"}
-          </Code>{" "}
-          tag is an empty tag, which means that it has no end tag.
+          The <Code color="success">{"<br>"}</Code> tag is an empty tag, which
+          means that it has no end tag.
         </p>
       </div>
 
       {/* The Poem Problem */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           The Poem Problem
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           This poem will display on a single line:
         </p>
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<p>"} <br />
           {"My Bonnie lies over the ocean."} <br />
@@ -195,26 +174,20 @@ function Hero() {
       {/* Solution - The HTML <pre> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Solution - The HTML {"<pre>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
-          The HTML{" "}
-          <Code color="success" radius="full">
-            {"<pre>"}
-          </Code>{" "}
-          element defines preformatted text. The text inside a{" "}
-          <Code color="success" radius="full">
-            {"<pre>"}
-          </Code>{" "}
-          element is displayed in a fixed-width font (usually Courier), and it
-          preserves both spaces and line breaks:
+          The HTML <Code color="success">{"<pre>"}</Code> element defines
+          preformatted text. The text inside a{" "}
+          <Code color="success">{"<pre>"}</Code> element is displayed in a
+          fixed-width font (usually Courier), and it preserves both spaces and
+          line breaks:
         </p>
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<pre>"} <br />
           {"My Bonnie lies over the ocean."} <br />
@@ -229,7 +202,7 @@ function Hero() {
       <Separator className="my-5" />
       {/* BUTTONS FOR NAVIGATION */}
 
-      <div className="flex justify-between mt-10 mb-24">
+      <div className="flex justify-between items-center mt-10 mb-24 ">
         <Link href={"/doc/html/headings"}>
           <Button variant={"outline"} className="flex gap-3">
             <ChevronLeftIcon className="h-4 w-4" /> Headings

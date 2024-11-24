@@ -17,7 +17,7 @@ import { TableDemo } from "../styles/Table";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -40,7 +40,7 @@ function Hero() {
       {/* Text Formatting */}
 
       <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[40px] text-[#09090b] font-bold">
           Text Formatting
         </h1>
         <Separator />
@@ -53,15 +53,15 @@ function Hero() {
           <h1 className=" font-bold">This text is bold</h1>
           <h1 className=" italic">This text is italic</h1>
         </div>
+        <Separator className="mt-5" />
       </div>
 
       {/* Formatting Elements */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Formatting Elements
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Formatting elements were designed to display special types of text:
         </p>
@@ -102,10 +102,9 @@ function Hero() {
       {/* <b> and <strong> Elements */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<b>"} and {"<strong>"} Elements
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<b>"}</Code> element defines bold
           text, without any extra importance.
@@ -113,7 +112,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] my-3"
-          size="lg"
+          size="md"
         >
           {"<b>This text is bold</b>"}
         </Code>
@@ -127,7 +126,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] my-3"
-          size="lg"
+          size="md"
         >
           {"<strong>This text is important!</strong>"}
         </Code>
@@ -136,10 +135,9 @@ function Hero() {
       {/* <i> and <em> Elements */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<i>"} and {"<em>"} Elements
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<i>"}</Code> element defines a part
           of text in an alternate voice or mood. The content inside is typically
@@ -150,7 +148,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] my-3"
-          size="lg"
+          size="md"
         >
           {"<i>This text is italic</i>"}
         </Code>
@@ -164,7 +162,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
           {"<em>This text is emphasized</em>"}
         </Code>
@@ -173,10 +171,9 @@ function Hero() {
       {/* <small> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<small>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<small>"}</Code> element defines
           smaller text:
@@ -184,7 +181,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
           {"<small>This is some smaller text.</small>"}
         </Code>
@@ -193,10 +190,9 @@ function Hero() {
       {/* <mark> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<mark>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<mark>"}</Code> element defines text
           that should be marked or highlighted:
@@ -204,19 +200,19 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
-          {"<p>Do not forget to buy <mark>milk</mark> today.</p>"}
+          {"<p>Do not forget to buy "} <br />
+          {"<mark>milk</mark> today.</p>"}
         </Code>
       </div>
 
       {/*<del> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<del>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<del>"}</Code> element defines text
           that has been deleted from a document. Browsers will usually strike a
@@ -225,7 +221,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
           {"<p>My favorite color is <del>blue</del> red.</p>"}
         </Code>
@@ -234,10 +230,9 @@ function Hero() {
       {/*<ins> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<ins>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<ins>"}</Code> eelement defines a
           text that has been inserted into a document. Browsers will usually
@@ -246,19 +241,21 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
-          {"<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>"}
+          {"<p>My favorite color is "} <br />
+          {"<del>blue</del> "} <br />
+          {"<ins>red</ins>."} <br />
+          {"</p>"}
         </Code>
       </div>
 
       {/* <sub> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<sub>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<sub>"}</Code> element defines
           subscript text. Subscript text appears half a character below the
@@ -268,7 +265,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
           {"<p>This is <sub>subscripted</sub> text.</p>"}
         </Code>
@@ -277,10 +274,9 @@ function Hero() {
       {/* <sup> Element */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<sup>"} Element
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<sup>"}</Code> element defines
           superscript text. Superscript text appears half a character above the
@@ -290,7 +286,7 @@ function Hero() {
         <Code
           color="success"
           className="w-full p-3 border-l-5 border-[#33d45e] mt-3"
-          size="lg"
+          size="md"
         >
           {"<p>This is <sub>subscripted</sub> text.</p>"}
         </Code>
@@ -304,7 +300,7 @@ function Hero() {
           Text Formatting Elements
         </h1>
         <Separator className="mb-5" />
-        <TableDemo/>
+        <TableDemo />
       </div>
 
       <Separator className="my-5" />

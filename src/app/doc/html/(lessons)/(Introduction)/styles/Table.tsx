@@ -50,14 +50,14 @@ const invoices = [
     title: "<mark>",
     description: "Defines marked/highlighted text",
   },
-  
+
 ];
 
 export function TableDemo() {
   return (
-    <Table>
+    <Table className="border">
       <TableCaption>list of all Formatting Elements</TableCaption>
-      <TableHeader>
+      <TableHeader className="bg-gray-100">
         <TableRow>
           <TableHead className="w-[150px] font-bold">Year</TableHead>
           <TableHead className="font-bold">Version</TableHead>

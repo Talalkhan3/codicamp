@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10 max-md:pr-3">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-md:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -34,11 +34,11 @@ function Hero() {
             </BreadcrumbItem>
           </BreadcrumbList>
         </Breadcrumb>
-      </div> 
+      </div>
       {/*  Elements */}
 
       <div className="mt-10 ">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Elements</h1>
+        <h1 className="text-[40px] text-[#09090b] font-bold">Elements</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           An HTML element is defined by a start tag, some content, and an end
@@ -48,13 +48,15 @@ function Hero() {
       </div>
       {/* HTML Elements */}
       <div className="mt-7">
-        <h1 className="text-[18px] text-[#09090b] font-bold">HTML Elements</h1>
-        <p className="text-[16px] text-[#71717a] mt-1">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
+          HTML Elements
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
           The HTML element is everything from the start tag to the end tag:
         </p>
 
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code color="success" className="border-l-5 border-[#33d45e]">
+          <Code color="success" className="w-full border-l-5 border-[#33d45e] p-3">
             {"<tagname>"} Content {"</tagname>"}
           </Code>
         </div>
@@ -62,13 +64,13 @@ function Hero() {
           Examples of some HTML elements:
         </p>
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code color="success" className="border-l-5 border-[#33d45e]">
+          <Code color="success" className="w-full border-l-5 border-[#33d45e] p-3">
             {" "}
             {"<h1>"} My First Heading {"</h1>"}
           </Code>
         </div>
         <div className="my-3 text-[20px] text-[#71717a]">
-          <Code color="success" className="border-l-5 border-[#33d45e]">
+          <Code color="success" className="w-full border-l-5 border-[#33d45e] p-3">
             {"<p>"} My First Paragraph {""}
             {"</p>"}
           </Code>
@@ -77,35 +79,25 @@ function Hero() {
 
       {/* Nested HTML Elements */}
 
-      <div>
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           Nested Elements
         </h1>
-        <p className="text-[16px] text-[#71717a] mt-1">
+        <p className="text-[16px] text-[#71717a] mt-3">
           HTML elements can be nested (this means that elements can contain
           other elements). All HTML documents consist of nested HTML elements.
           The following example contains four HTML elements (
-          <Code color="success" radius="full">
-            {"<html>"}
-          </Code>
-          ,
-          <Code color="success" radius="full">
-            {"<body>"}
-          </Code>{" "}
-          ,{" "}
-          <Code color="success" radius="full">
-            {"<h1>"}
-          </Code>{" "}
-          and
-          <Code color="success" radius="full">
-            {"<p>"}
-          </Code>
+          <Code color="success">{"<html>"}</Code>,
+          <Code color="success">{"<body>"}</Code> ,{" "}
+          <Code color="success">{"<h1>"}</Code> and
+          <Code color="success">{"<p>"}</Code>
           ):
         </p>
         <h1 className="text-[18px] text-[#09090b] font-bold">Example</h1>
         <Code
           className="mt-2 w-full border-l-5 border-[#33d45e] p-3"
           color="success"
+          size="md"
         >
           {"<!DOCTYPE html>"} <br />
           {"<html>"} <br />
@@ -117,33 +109,18 @@ function Hero() {
         </Code>
         <div className="mt-3">
           <p className="text-[16px] text-[#71717a]">
-            The{" "}
-            <Code color="success" radius="full">
-              {"<html>"}
-            </Code>{" "}
-            element is the root element and it defines the whole HTML document.
-            It has a start tag{" "}
-            <Code color="success" radius="full">
-              {"<html>"}
-            </Code>{" "}
-            and an end tag{" "}
-            <Code color="success" radius="full">
-              {"</html>"}
-            </Code>
-            . Then, inside the{" "}
-            <Code color="success" radius="full">
-              {"<html>"}
-            </Code>{" "}
-            element there is a{" "}
-            <Code color="success" radius="full">
-              {"<body>"}
-            </Code>{" "}
-            element:
+            The <Code color="success">{"<html>"}</Code> element is the root
+            element and it defines the whole HTML document. It has a start tag{" "}
+            <Code color="success">{"<html>"}</Code> and an end tag{" "}
+            <Code color="success">{"</html>"}</Code>. Then, inside the{" "}
+            <Code color="success">{"<html>"}</Code> element there is a{" "}
+            <Code color="success">{"<body>"}</Code> element:
           </p>
 
           <Code
             className="border-l-5 border-[#33d45e] mt-3 w-full p-3 "
             color="success"
+            size="md"
           >
             {"<body>"} <br /> <br />
             {"<h1>My First Heading</h1>"} <br />
@@ -152,85 +129,49 @@ function Hero() {
           </Code>
 
           <p className="text-[16px] text-[#71717a] mt-3">
-            The{" "}
-            <Code color="success" radius="full">
-              {"<body>"}
-            </Code>{" "}
-            element defines the document's body. It has a start tag{" "}
-            <Code color="success" radius="full">
-              {"<body>"}
-            </Code>{" "}
-            and an end tag{" "}
-            <Code color="success" radius="full">
-              {"</body>"}
-            </Code>
-            . Then, inside the{" "}
-            <Code color="success" radius="full">
-              {"<body>"}
-            </Code>{" "}
-            element there are two other elements:{" "}
-            <Code color="success" radius="full">
-              {"<h1>"}
-            </Code>{" "}
-            and{" "}
-            <Code color="success" radius="full">
-              {"<p>"}
-            </Code>
-            :
+            The <Code color="success">{"<body>"}</Code> element defines the
+            document's body. It has a start tag{" "}
+            <Code color="success">{"<body>"}</Code> and an end tag{" "}
+            <Code color="success">{"</body>"}</Code>. Then, inside the{" "}
+            <Code color="success">{"<body>"}</Code> element there are two other
+            elements: <Code color="success">{"<h1>"}</Code> and{" "}
+            <Code color="success">{"<p>"}</Code>:
           </p>
 
           <Code
             className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
             color="success"
+            size="md"
           >
             {"<h1>My First Heading</h1>"} <br />
             {"<p>My first paragraph.</p>"}
           </Code>
 
           <p className="text-[16px] text-[#71717a] my-3">
-            The{" "}
-            <Code color="success" radius="full">
-              {"<h1>"}
-            </Code>
+            The <Code color="success">{"<h1>"}</Code>
             element defines a heading. It has a start tag{" "}
-            <Code color="success" radius="full">
-              {"<h1>"}
-            </Code>{" "}
-            and an end tag{" "}
-            <Code color="success" radius="full">
-              {"<h1>"}
-            </Code>
-            :
+            <Code color="success">{"<h1>"}</Code> and an end tag{" "}
+            <Code color="success">{"<h1>"}</Code>:
           </p>
 
           <Code
             className="border-l-5 border-[#33d45e] w-full p-3 "
             color="success"
-            size="lg"
+            size="md"
           >
             {"<h1>My First Heading</h1>"}
           </Code>
 
           <p className="text-[16px] text-[#71717a] my-3">
-            The{" "}
-            <Code color="success" radius="full">
-              {"<p>"}
-            </Code>{" "}
-            element defines a paragraph. It has a start tag{" "}
-            <Code color="success" radius="full">
-              {"<p>"}
-            </Code>{" "}
-            and an end tag{" "}
-            <Code color="success" radius="full">
-              {"<p>"}
-            </Code>{" "}
-            :
+            The <Code color="success">{"<p>"}</Code> element defines a
+            paragraph. It has a start tag <Code color="success">{"<p>"}</Code>{" "}
+            and an end tag <Code color="success">{"<p>"}</Code> :
           </p>
 
           <Code
             className="border-l-5 border-[#33d45e] w-full p-3 "
             color="success"
-            size="lg"
+            size="md"
           >
             {"<p>My first paragraph.</p>"}
           </Code>
@@ -239,12 +180,11 @@ function Hero() {
 
       {/* Never Skip the End Tag */}
 
-      <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           Never Skip the End Tag
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           Some HTML elements will display correctly, even if you forget the end
           tag:
         </p>
@@ -252,6 +192,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
+          size="md"
         >
           {"<html>"} <br />
           {"<body>"} <br /> <br />
@@ -261,39 +202,36 @@ function Hero() {
           {"</html>"}
         </Code>
       </div>
-      <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           Empty HTML Elements
         </h1>
-        <Separator />
-        <p className="text-[16px] text-[#71717a] mt-5">
+        <p className="text-[16px] text-[#71717a] mt-3">
           HTML elements with no content are called empty elements. The{" "}
-          <Code color="success" radius="full">
-            {"<br>"}
-          </Code>{" "}
-          tag defines a line break, and is an empty element without a closing
-          tag:
+          <Code color="success">{"<br>"}</Code> tag defines a line break, and is
+          an empty element without a closing tag:
         </p>
 
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
+          size="md"
         >
           {"<p>This is a <br> paragraph with a line break.</p>"}
         </Code>
       </div>
-      <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline underline-offset-4 decoration-green-400">
           HTML is Not Case Sensitive
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           HTML tags are not case sensitive:{" "}
-          <Code color="success" radius="full">
+          <Code color="success">
             {"<p>"}
           </Code>{" "}
           means the same as{" "}
-          <Code color="success" radius="full">
+          <Code color="success">
             {"<p>"}
           </Code>
         </p>

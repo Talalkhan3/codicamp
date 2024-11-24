@@ -17,7 +17,7 @@ import { CircleIcon } from "@radix-ui/react-icons";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -40,7 +40,7 @@ function Hero() {
       {/* CSS */}
 
       <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">CSS</h1>
+        <h1 className="text-[40px] text-[#09090b] font-bold">CSS</h1>
         <Separator />
         <p className="text-[16px] text-[#71717a] mt-5">
           CSS stands for <strong>Cascading Style Sheets</strong>. <br /> CSS
@@ -53,8 +53,9 @@ function Hero() {
       {/* What is CSS? */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">What is CSS?</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          What is CSS?
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           Cascading Style Sheets (CSS) is used to format the layout of a
           webpage. <br /> <br />
@@ -68,8 +69,9 @@ function Hero() {
       {/* Using CSS */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Using CSS</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Using CSS
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           CSS can be added to HTML documents in 3 ways:
         </p>
@@ -119,8 +121,9 @@ function Hero() {
       {/* Inline CSS */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Inline CSS</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Inline CSS
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           An inline CSS is used to apply a unique style to a single HTML
           element. An inline CSS uses the style attribute of an HTML element.
@@ -131,7 +134,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {` <h1 style="color:blue;">A Blue Heading</h1> `} <br /> <br />
           {` <p style="color:red;">A red paragraph.</p>`}
@@ -141,8 +144,9 @@ function Hero() {
       {/* Internal CSS */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Internal CSS</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Internal CSS
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           An internal CSS is used to define a style for a single HTML page. An
           internal CSS is defined in the <Code color="success">{"<head>"}</Code>{" "}
@@ -157,7 +161,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<!DOCTYPE html>`} <br />
           {`<html>`} <br />
@@ -179,8 +183,9 @@ function Hero() {
       {/* External CSS */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">External CSS</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          External CSS
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           An external style sheet is used to define the style for many HTML
           pages. To use an external style sheet, add a link to it in the{" "}
@@ -189,7 +194,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] my-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<!DOCTYPE html>`} <br />
           {`<html>`} <br />
@@ -210,7 +215,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`body {`} <br />
           {`background-color: powderblue;`} <br />
@@ -227,10 +232,9 @@ function Hero() {
       {/* CSS Colors, Fonts and Sizes */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           CSS Colors, Fonts and Sizes
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Here, we will demonstrate some commonly used CSS properties. You will
           learn more about them later.
@@ -252,7 +256,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<!DOCTYPE html>`} <br />
           {"<html>"} <br />
@@ -281,8 +285,9 @@ function Hero() {
       {/* CSS Border */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">CSS Border</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          CSS Border
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           The CSS border property defines a border around an HTML element.You
           can define a border for nearly all HTML elements.
@@ -290,7 +295,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"p {"} <br />
           {"  border: 2px solid powderblue;"} <br />
@@ -301,8 +306,9 @@ function Hero() {
       {/* CSS Padding */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">CSS Padding</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          CSS Padding
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           The CSS padding property defines a padding (space) between the text
           and the border.
@@ -310,7 +316,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"p {"} <br />
           {"  border: 2px solid powderblue;"} <br />
@@ -322,15 +328,16 @@ function Hero() {
       {/* CSS Margin */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">CSS Margin</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          CSS Margin
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           The CSS margin property defines a margin (space) outside the border.
         </p>
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"p {"} <br />
           {"  border: 2px solid powderblue;"} <br />
@@ -342,10 +349,9 @@ function Hero() {
       {/* Link to External CSS */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Link to External CSS
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           External style sheets can be referenced with a full URL or with a path
           relative to the current web page.
@@ -356,9 +362,10 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-2 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">`}
+          {`<link rel="stylesheet"`} <br />{" "}
+          {`href="https://www.w3schools.com/html/styles.css">`}
         </Code>
         <p className="text-[16px] text-[#71717a] mt-3">
           This example links to a style sheet located in the html folder on the
@@ -367,7 +374,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-2 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<link rel="stylesheet" href="/html/styles.css">`}
         </Code>
@@ -378,7 +385,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-2 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<link rel="stylesheet" href="styles.css">`}
         </Code>

@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -37,7 +37,7 @@ function Hero() {
       </div>
 
       <div className="mt-10">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[40px] text-[#09090b] font-bold">
           Quotation and Citation Elements
         </h1>
         <Separator />
@@ -54,10 +54,9 @@ function Hero() {
       </div>
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<blockquote>"} for Quotations
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{`<blockquote>`}</Code> element defines
           a section that is quoted from another source. Browsers usually indent{" "}
@@ -66,26 +65,27 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<p>Here is a quote from WWF's website:</p>`} <br />
-          {`<blockquote cite="http://www.worldwildlife.org/who/index.html">`}{" "}
-          <br /> <br />
-          For 60 years, WWF has worked to help people and nature thrive. As the
-          world's <br /> leading conservation organization, WWF works in nearly
-          100 countries. At every level, <br /> we collaborate with people
-          around the world to develop and deliver innovative <br />
-          solutions that protectcommunities, wildlife, and the places in which
-          they live. <br /> <br />
+          {`<blockquote `} <br />
+          {`cite="http://www.worldwildlife.org`} <br />
+          {`/who/index.html">`} <br /> <br />
+          For 60 years, WWF has worked to help people <br /> and nature thrive.
+          As the world's <br /> leading conservation organization, WWF <br />{" "}
+          works in nearly 100 countries. At every <br /> level, we collaborate
+          with people around <br /> the world to develop and deliver innovative{" "}
+          <br />
+          solutions that protectcommunities, wildlife, <br /> and the places in
+          which they live. <br /> <br />
           {`</blockquote>`}
         </Code>
       </div>
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<q>"} for Short Quotations
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<q>"}</Code> tag defines a short
           quotation. Browsers normally insert quotation marks around the
@@ -94,20 +94,22 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>`}{" "}
-          <br />
+          {`<p>WWF's goal is to: `} <br /> {`<q>`} <br />
+          {`Build a future where people live in harmony `} <br />{" "}
+          {` with nature. `} <br />
+          {`</q>`} <br />
+          {`</p>`} <br />
         </Code>
       </div>
 
       {/* <abbr> for Abbreviations */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<abbr>"} for Abbreviations
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<abbr>"}</Code> tag defines an
           abbreviation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP",
@@ -117,20 +119,22 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>`}{" "}
-          <br />
+          {`<p>The `} <br />
+          {`<abbr title="World Health Organization">`} <br />
+          {`WHO`} <br /> {`</abbr>`} <br />
+          {` was founded in 1948.`} <br />
+          {`</p>`} <br />
         </Code>
       </div>
 
       {/* <address> for Contact Information */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<address>"} for Contact Information
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{`<address>`}</Code> tag defines the
           contact information for the author/owner of a document or an article.
@@ -143,7 +147,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<address>`} <br />
           {"Written by John Doe.<br>"} <br />
@@ -158,10 +162,9 @@ function Hero() {
       {/* <cite> for Work Title */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<cite>"} for Work Title
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{`<cite>`}</Code> tag defines the title
           of a creative work (e.g. a book, a poem, a song, a movie, a painting,
@@ -172,20 +175,22 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>`}{" "}
+          {`<p>`} <br />
+          {`<cite>`} <br />
+          {`The Scream`} <br /> {`</cite>`} <br />{" "}
+          {`by Edvard Munch. Painted in 1893.`} <br />
+          {`</p>`}{" "}
         </Code>
       </div>
 
       {/* <bdo> for Bi-Directional Override */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           {"<bdo>"} for Bi-Directional Override
         </h1>
-
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           BDO stands for Bi-Directional Override. The HTML{" "}
           <Code color="success">{`<bdo>`}</Code>tag is used to override the
@@ -194,9 +199,11 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] w-full mt-3 p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<bdo dir="rtl">This text will be written from right to left</bdo>`}{" "}
+          {`<bdo dir="rtl">`} <br />
+          {`This text will be written from right to left`} <br />
+          {`</bdo>`}{" "}
         </Code>
       </div>
       <Separator className="my-5" />

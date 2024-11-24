@@ -16,7 +16,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
   return (
-    <ScrollArea className="w-full h-[90vh] pr-10">
+    <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
       <div>
         <Breadcrumb>
@@ -51,10 +51,9 @@ function Hero() {
       {/* Links - Hyperlinks */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Links - Hyperlinks
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           HTML links are hyperlinks. You can click on a link and jump to another
           document. When you move the mouse over a link, the mouse arrow will
@@ -65,8 +64,9 @@ function Hero() {
       {/* Links - Syntax */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Links - Syntax</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Links - Syntax
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           The HTML <Code color="success">{"<a>"}</Code> tag defines a hyperlink.
           It has the following syntax:
@@ -74,7 +74,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<a href="url">link text</a>`}
         </Code>
@@ -89,9 +89,11 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<a href="https://www.w3schools.com/">Visit W3Schools.com!</a>`}
+          {`<a href="https://www.devlearn.com/">`} <br />{" "}
+          {`Visit devlearn.com!`} <br />
+          {`</a>`}
         </Code>
         <p className="text-[16px] text-[#71717a] mt-3">
           By default, links will appear as follows in all browsers:
@@ -124,10 +126,9 @@ function Hero() {
       {/* Links - The target Attribute */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Links - The target Attribute
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           By default, the linked page will be displayed in the current browser
           window. To change this, you must specify another target for the link.
@@ -176,10 +177,9 @@ function Hero() {
       {/* Absolute URLs vs. Relative URLs */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Absolute URLs vs. Relative URLs
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Both examples above are using an absolute URL (a full web address) in
           the href attribute. A local link (a link to a page within the same
@@ -189,24 +189,28 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {"<h2>Absolute URLs</h2>"} <br />
-          {`<p><a href="https://www.w3.org/">W3C</a></p>`} <br />
-          {`<p><a href="https://www.google.com/">Google</a></p>`} <br /> <br />
+          {`<p>`} <br /> {`<a href="https://www.w3.org/">W3C</a>`} <br />
+          {`</p>`} <br />
+          {`<p>`} <br />
+          {`<a href="https://www.google.com/">Google</a>`} <br />
+          {`</p>`} <br /> <br />
           {`<h2>Relative URLs</h2>`} <br />
-          {`<p><a href="html_images.asp">HTML Images</a></p>`} <br />
-          {`<p><a href="/css/default.asp">CSS Tutorial</a></p>`}
+          {`<p>`} <br /> {`<a href="html_images.asp">HTML Images</a>`} <br />
+          {`</p>`} <br />
+          {`<p>`} <br /> {`<a href="/css/default.asp">CSS Tutorial</a>`} <br />
+          {`</p>`}
         </Code>
       </div>
 
       {/* Links - Use an Image as a Link */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Links - Use an Image as a Link
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           To use an image as a link, just put the{" "}
           <Code color="success">{"<img>"}</Code> tag inside the{" "}
@@ -215,10 +219,11 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<a href="default.asp">`}
-          {`<img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">`}
+          {`<a href="default.asp">`} <br />
+          {`<img src="smiley.gif" alt="HTML tutorial" `} <br />{" "}
+          {`style="width:42px;height:42px;">`} <br />
           {`</a>`}
         </Code>
       </div>
@@ -226,10 +231,9 @@ function Hero() {
       {/* Link to an Email Address */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Link to an Email Address
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Use mailto: inside the href attribute to create a link that opens the
           user's email program (to let them send a new email):
@@ -237,19 +241,20 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<a href="mailto:someone@example.com">Send email</a>`}
+          {`<a href="mailto:someone@example.com">`} <br />
+          {`Send email`} <br />
+          {`</a>`}
         </Code>
       </div>
 
       {/* Button as a Link */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           Button as a Link
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           To use an HTML button as a link, you have to add some JavaScript code.
           JavaScript allows you to specify what happens at certain events, such
@@ -258,17 +263,19 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<button onclick="document.location='default.asp'">HTML Tutorial</button>`}
+          {`<button onclick="document.location='default.asp'">`} <br />{" "}
+          {`HTML Tutorial`} <br /> {`</button>`}
         </Code>
       </div>
 
       {/* Link Titles */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">Link Titles</h1>
-        <Separator />
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Link Titles
+        </h1>
         <p className="text-[16px] text-[#71717a] mt-3">
           The title attribute specifies extra information about an element. The
           information is most often shown as a tooltip text when the mouse moves
@@ -277,28 +284,32 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>`}
+          {`<a href="https://www.w3schools.com/html/" `} <br />{" "}
+          {`title="Go to W3Schools HTML section">`} <br />{" "}
+          {`Visit our HTML Tutorial`} <br /> {`</a>`}
         </Code>
       </div>
 
       {/* More on Absolute URLs and Relative URLs */}
 
       <div className="mt-7">
-        <h1 className="text-[30px] text-[#09090b] font-bold">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
           More on Absolute URLs and Relative URLs
         </h1>
-        <Separator />
         <p className="text-[16px] text-[#71717a] mt-3">
           Use a full URL to link to a web page:{" "}
         </p>
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
-          {`<a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a>`}
+          {`<a href="https://www.w3schools.com/html/`} <br />
+          {`default.asp">`} <br />
+          {`HTML tutorial`} <br />
+          {`</a>`}
         </Code>
         <p className="text-[16px] text-[#71717a] mt-3">
           Link to a page located in the html folder on the current web site:{" "}
@@ -306,7 +317,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<a href="/html/default.asp">HTML tutorial</a>`}
         </Code>
@@ -316,7 +327,7 @@ function Hero() {
         <Code
           className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
           color="success"
-          size="lg"
+          size="md"
         >
           {`<a href="default.asp">HTML tutorial</a>`}
         </Code>
