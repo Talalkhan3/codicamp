@@ -1,3 +1,5 @@
+"use client";
+import { CodeBlock } from "@/components/ui/code-block";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import React from "react";
 import {
@@ -15,6 +17,10 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
+  const code = `p {
+color: red;
+text-align: center;
+}`;
   return (
     <ScrollArea className="w-full h-[90vh] pr-10 max-lg:pr-3">
       {/* BREADCRUMBS  */}
@@ -61,16 +67,7 @@ function Hero() {
           Multiple CSS declarations are separated with semicolons, and
           declaration blocks are surrounded by curly braces.
         </p>
-        <Code
-          className="border-l-5 border-[#33d45e] mt-2 w-full p-3"
-          color="success"
-          size="md"
-        >
-          {"p {"}
-          <p className="pl-4">{"color: red;"}</p>
-          <p className="pl-4">{"text-align: center;"}</p>
-          {"}"}
-        </Code>
+        <CodeBlock language="css" filename="syntax.css" code={code} />
         <p className="text-[16px] text-[#71717a] mt-3">
           In CSS, the <Code color="success">{"p"}</Code> selector targets the
           HTML <Code color="success">{"<p>"}</Code> element, allowing you to

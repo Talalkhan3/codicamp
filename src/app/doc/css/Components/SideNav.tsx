@@ -171,7 +171,7 @@ const cssIntroductionNav = [
   },
   {
     label: "!important",
-    href: "/doc/css/!important",
+    href: "/doc/css/css_important",
   },
   {
     label: "Math Functions",
@@ -190,11 +190,11 @@ const cssAdvancedNav = [
   },
   {
     label: "Backgrounds",
-    href: "/doc/css/backgrounds",
+    href: "/doc/css/ad-backgrounds",
   },
   {
     label: "Colors",
-    href: "/doc/css/colors",
+    href: "/doc/css/ad-colors",
   },
   {
     label: "Color Keyword",
@@ -237,12 +237,8 @@ const cssAdvancedNav = [
     href: "/doc/css/tool-tips",
   },
   {
-    label: "Style Images",
-    href: "/doc/css/style-images",
-  },
-  {
-    label: "Image Reflections",
-    href: "/doc/css/image-reflections",
+    label: "Image Centering",
+    href: "/doc/css/image-centering",
   },
   {
     label: "Object Fit",

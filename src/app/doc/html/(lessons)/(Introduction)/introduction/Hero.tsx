@@ -1,3 +1,5 @@
+"use client";
+import { CodeBlock } from "@/components/ui/code-block";
 import React from "react";
 import {
   Breadcrumb,
@@ -16,6 +18,19 @@ import { Separator } from "@/components/ui/separator";
 import { TableDemo } from "./Table";
 
 function Hero() {
+  const code = `<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+</body>
+</html>
+`;
   return (
     <ScrollArea className="w-full h-[90vh] pr-10 max-lg:px-0">
       {/* BREADCRUMBS  */}
@@ -61,19 +76,14 @@ function Hero() {
           <h1 className="text-[30px] text-[#09090b] font-bold decoration-2 underline decoration-green-400">
             Example
           </h1>
-
-          <Code color="success" size="md" className="w-full p-3 mt-3">
-            {"<!DOCTYPE html>"} <br />
-            {"<html>"} <br />
-            {"<head>"} <br />
-            {"<title>Page Title</title>"} <br />
-            {"</head>"} <br />
-            {"<body>"} <br /> <br />
-            {"<h1>My First Heading</h1>"} <br />
-            {"<p>My first paragraph.</p>"} <br /> <br />
-            {"</body>"} <br />
-            {"</html>"}
-          </Code>
+          <div>
+            <CodeBlock
+              language="html"
+              filename="introduction.html"
+              highlightLines={[9, 13, 14, 18]}
+              code={code}
+            />
+          </div>
         </div>
       </div>
 

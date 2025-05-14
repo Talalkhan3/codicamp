@@ -1,8 +1,9 @@
 import { Metadata } from "next";
+import React from "react";
 import Hero from "./Hero";
 
 export const metadata: Metadata = {
-  title: "CSS Specificity | devlearn",
+  title: "CSS Web Fonts | devlearn",
 };
 
 function page() {

@@ -22,68 +22,51 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-const absLenghts = [
+const calspec = [
   {
-    unit: "cm",
-    desc: "centimeters",
+    sel: "p",
+    spe: "1",
+    cal: "1",
   },
   {
-    unit: "mm",
-    desc: "	millimeters",
+    sel: "p.test",
+    spe: "11",
+    cal: "1 + 10",
   },
   {
-    unit: "in",
-    desc: "inches (1in = 96px = 2.54cm)",
+    sel: "p#demo",
+    spe: "101",
+    cal: "1 + 100",
   },
   {
-    unit: "px *",
-    desc: "pixels (1px = 1/96th of 1in)",
+    sel: `<p style="color: pink;">`,
+    spe: "1000",
+    cal: "1000",
   },
   {
-    unit: "pt",
-    desc: "	points (1pt = 1/72 of 1in)",
+    sel: "#demo",
+    spe: "100",
+    cal: "100",
   },
   {
-    unit: "pc",
-    desc: "pc",
-  },
-];
-const relaLenghts = [
-  {
-    unit: "em",
-    desc: "Relative to the font-size of the element (2em means 2 times the size of the current font)",
+    sel: ".test",
+    spe: "10",
+    cal: "10",
   },
   {
-    unit: "ex",
-    desc: "	Relative to the x-height of the current font (rarely used)",
+    sel: "p.test1.test2",
+    spe: "21",
+    cal: "1 + 10 + 10",
   },
   {
-    unit: "ch",
-    desc: `Relative to width of the "0" (zero)`,
+    sel: "#navbar p#demo",
+    spe: "201",
+    cal: "100 + 1 + 100",
   },
   {
-    unit: "rem",
-    desc: "Relative to font-size of the root element",
-  },
-  {
-    unit: "vw",
-    desc: "	Relative to 1% of the width of the viewport*",
-  },
-  {
-    unit: "vh",
-    desc: "	Relative to 1% of the height of the viewport*",
-  },
-  {
-    unit: "vmin",
-    desc: "Relative to 1% of viewport's* smaller dimension",
-  },
-  {
-    unit: "vmax",
-    desc: "	Relative to 1% of viewport's* larger dimension",
-  },
-  {
-    unit: "%",
-    desc: "	Relative to the parent element",
+    sel: "*",
+    spe: "0",
+    cal: "0 (the universal selector is ignored)",
   },
 ];
 
@@ -122,6 +105,231 @@ function Hero() {
           element types.
         </p>
         <Separator className="mt-5" />
+      </div>
+
+      {/* What is Specificity? */}
+
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          What is Specificity?
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          If there are two or more CSS rules that point to the same element, the
+          selector with the highest specificity value will "win", and its style
+          declaration will be applied to that HTML element. Think of specificity
+          as a score/rank that determines which style declaration is ultimately
+          applied to an element. Look at the following examples:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"<html>"} <br />
+          {"<head>"}
+          <p className="pl-3">{"<style>"}</p>
+          <p className="pl-7">{"p {color: red;}"}</p>
+          <p className="pl-3">{"</style>"}</p>
+          {"</head>"} <br />
+          {"<body>"} <br /> <br />
+          {"<p>Hello World!</p>"} <br /> <br />
+          {"</body>"} <br />
+          {"</html>"}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          Now, look at example 2:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"<html>"} <br />
+          {"<head>"}
+          <p className="pl-3">{"<style>"}</p>
+          <p className="pl-7">{".test {color: green;}"}</p>
+          <p className="pl-7">{"p {color: red;}"}</p>
+          <p className="pl-3">{"</style>"}</p>
+          {"</head>"} <br />
+          {"<body>"} <br /> <br />
+          {`<p class="test">Hello World!</p>`} <br /> <br />
+          {"</body>"} <br />
+          {"</html>"}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          Now, look at example 3:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"<html>"} <br />
+          {"<head>"}
+          <p className="pl-3">{"<style>"}</p>
+          <p className="pl-7">{"#demo {color: blue;}"}</p>
+          <p className="pl-7">{".test {color: green;}"}</p>
+          <p className="pl-7">{" p {color: red;}"}</p>
+          <p className="pl-3">{"</style>"}</p>
+          {"</head>"} <br />
+          {"<body>"} <br /> <br />
+          {`<p id="demo" class="test">Hello World!</p>`} <br /> <br />
+          {"</body>"} <br />
+          {"</html>"}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          Now, look at example 4:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"<html>"} <br />
+          {"<head>"}
+          <p className="pl-3">{"<style>"}</p>
+          <p className="pl-7">{"#demo {color: blue;}"}</p>
+          <p className="pl-7">{".test {color: green;}"}</p>
+          <p className="pl-7">{"p {color: red;}"}</p>
+          <p className="pl-3">{"</style>"}</p>
+          {"</head>"} <br />
+          {"<body>"} <br /> <br />
+          {`<p id="demo" class="test" style="color: pink;">`} <br />{" "}
+          {`Hello World!`} <br />
+          {`</p>`} <br /> <br />
+          {"</body>"} <br />
+          {"</html>"}
+        </Code>
+      </div>
+
+      {/* Specificity Hierarchy */}
+
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          Specificity Hierarchy
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          CSS selectors follow a specificity hierarchy divided into four levels:
+          inline styles, which have the highest specificity (e.g.,{" "}
+          <Code color="success">{`<h1 style="color: pink;">`}</Code>); ID
+          selectors, such as <Code color="success">#navbar</Code>; class
+          selectors, pseudo-classes, and attribute selectors, like{" "}
+          <Code color="success">.test</Code>,<Code color="success">:hover</Code>
+          , or <Code color="success">[href]</Code>; and finally, element
+          selectors and pseudo-elements, such as <Code color="success">h1</Code>{" "}
+          or <Code color="success">::before</Code>, which have the lowest
+          specificity.
+        </p>
+      </div>
+
+      {/* How to Calculate Specificity? */}
+
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          How to Calculate Specificity?
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          Memorize how to calculate specificity! Start at 0, add 100 for each ID
+          value, add 10 for each class value (or pseudo-class or attribute
+          selector), add 1 for each element selector or pseudo-element. The
+          table below shows some examples on how to calculate specificity
+          values:
+        </p>
+        <Table className="mt-3 border">
+          <TableHeader className="bg-gray-100">
+            <TableRow>
+              <TableHead>Selector</TableHead>
+              <TableHead>Specificity Value</TableHead>
+              <TableHead>Calculation</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {calspec.map((key, index) => (
+              <TableRow key={index}>
+                <TableCell className="font-medium">{key.sel}</TableCell>
+                <TableCell className="text-[#71717a]">{key.spe}</TableCell>
+                <TableCell className="text-[#71717a]">{key.cal}</TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </div>
+
+      {/* More Specificity Rules Examples */}
+
+      <div className="mt-7">
+        <h1 className="text-[30px] text-[#09090b] font-bold underline underline-offset-4 decoration-green-400 decoration-2">
+          More Specificity Rules Examples
+        </h1>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          If the same rule is written twice into the external style sheet, then
+          the latest rule wins:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"h1 {background-color: yellow;}"} <br />
+          {"h1 {background-color: red;}"}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          Look at the following three code lines:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {`div#a {background-color: green;}`} <br />
+          {`#a {background-color: yellow;}`} <br />
+          {`div[id=a] {background-color: blue;}`}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          the first rule is more specific than the other two, and will therefore
+          be applied. The embedded style sheet is closer to the element to be
+          styled. So in the following situation
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {"/*From external CSS file:*/"} <br />
+          {"#content h1 {background-color: red;}"} <br /> <br />
+          {"/*In HTML file:*/"} <br />
+          {"<style>"} <br />
+          {"#content h1 {background-color: yellow;}"} <br />
+          {"</style>"}
+        </Code>
+        <p className="text-[16px] text-[#71717a] mt-3">
+          a class selector such as .intro beats h1, p, div, etc:
+        </p>
+        <Code
+          className="border-l-5 border-[#33d45e] mt-3 w-full p-3"
+          color="success"
+          size="md"
+        >
+          {".intro {background-color: yellow;}"} <br />
+          {"h1 {background-color: red;}"}
+        </Code>
+      </div>
+
+      <Separator className="my-5" />
+
+      {/* BUTTONS FOR NAVIGATION */}
+
+      <div className="flex justify-between mt-10 mb-24 ">
+        <Link href={"/doc/css/units"}>
+          <Button variant={"outline"} className="flex gap-3">
+            <ChevronLeftIcon className="h-4 w-4" /> Units
+          </Button>
+        </Link>
+        <Link href={"/doc/css/css_important"}>
+          <Button variant={"outline"} className="flex gap-3">
+            !important <ChevronRightIcon className="h-4 w-4" />{" "}
+          </Button>
+        </Link>
       </div>
     </ScrollArea>
   );

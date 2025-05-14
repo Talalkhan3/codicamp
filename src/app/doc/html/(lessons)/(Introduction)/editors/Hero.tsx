@@ -1,3 +1,5 @@
+"use client";
+import { CodeBlock } from "@/components/ui/code-block";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import React from "react";
 import {
@@ -15,6 +17,32 @@ import { Button } from "@/components/ui/button";
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react";
 
 function Hero() {
+  const code = `<!DOCTYPE html>
+<html>
+<head>
+<title>My First Web Page</title>
+</head>
+<body>
+
+<h1>Welcome to My Website!</h1>
+<p>This is a simple HTML page.</p>
+
+</body>
+</html>
+`;
+
+  const code1 = `<!DOCTYPE html>
+<html>
+<head>
+<title>My First Web Page</title>
+</head>
+<body>
+
+<h1>Welcome to My Website!</h1>
+<p>This is a simple HTML page.</p>
+
+</body>
+</html>`;
   return (
     <ScrollArea className="w-full h-[90vh] pr-10">
       {/* BREADCRUMBS  */}
@@ -107,20 +135,10 @@ function Hero() {
                 Start with a basic HTML structure
               </p>
             </div>
-            <div>
-              <Code color="success" size="md" className="w-full p-3 mt-3">
-                {"<!DOCTYPE html>"} <br />
-                {"<html>"} <br />
-                {"<head>"} <br />
-                {"<title>My First Web Page</title>"} <br />
-                {"</head>"} <br />
-                {"<body>"} <br /> <br />
-                {"  <h1>Welcome to My Website!</h1>"} <br />
-                {" <p>This is a simple HTML page.</p>"} <br /> <br />
-                {"</body>"} <br />
-                {"</html>"}
-              </Code>
+            <div className="rounded-xl overflow-hidden">
+              <CodeBlock language="html" filename="editors.html" code={code} highlightLines={[1,3,5]}/>
             </div>
+
             <div className="mt-5 ">
               <h1 className="text-[16px] font-bold text-[#09090b]">
                 3. Save the File:
@@ -187,19 +205,8 @@ function Hero() {
                 3. Write Your HTML Code:
               </h1>
             </div>
-            <div>
-              <Code color="success" size="md" className="w-full p-3 mt-3">
-                {"<!DOCTYPE html>"} <br />
-                {"<html>"} <br />
-                {"<head>"} <br />
-                {"<title>My First Web Page</title>"} <br />
-                {"</head>"} <br />
-                {"<body>"} <br /> <br />
-                {"  <h1>Welcome to My Website!</h1>"} <br />
-                {" <p>This is a simple HTML page.</p>"} <br /> <br />
-                {"</body>"} <br />
-                {"</html>"}
-              </Code>
+            <div className="rounded-xl overflow-hidden">
+              <CodeBlock language="html" filename="editor1.html" code={code1} />
             </div>
             <div className="mt-5">
               <h1 className="text-[16px] font-bold text-[#09090b]">

@@ -19,7 +19,7 @@ export default function RootLayout({
         <Navbar />
         <div className="flex mx-auto h-full max-w-[1390px] pt-8 border-l border-r max-lg:border-none">
           <SideNav />
-          <div className="w-full ml-10  max-lg:ml-3 max-lg:mr-2 max-h-[80vh]">
+          <div className="w-full ml-10 max-lg:ml-2 max-lg:mr-2 max-h-[88vh] overflow-hidden">
             {children}
           </div>
         </div>

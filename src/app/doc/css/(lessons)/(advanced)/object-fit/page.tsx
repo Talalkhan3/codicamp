@@ -1,8 +1,9 @@
-import { Metadata } from "next";
+import React from "react";
 import Hero from "./Hero";
+import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CSS Specificity | devlearn",
+  title: "CSS Object Fit | devlearn",
 };
 
 function page() {
